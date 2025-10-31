@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Math Catcher — Chalkboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header>
+    <h1>Math Catcher ✏️</h1>
+  </header>
+
+  <!-- Main Menu -->
+  <div id="mainMenu" class="screen">
+    <div class="menu-card">
+      <h2>Welcome!</h2>
+      <div class="menu-buttons">
+        <button id="btnPlay">Play</button>
+        <button id="btnHelp">Help</button>
+        <button id="btnContact">Contact</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Category select -->
+  <div id="categoryMenu" class="screen hidden">
+    <div class="menu-card">
+      <h2>Choose a category</h2>
+      <div class="menu-buttons">
+        <button class="category-btn" data-cat="math">Math</button>
+      </div>
+      <button class="back-btn">Back</button>
+    </div>
+  </div>
+
+  <!-- Level select -->
+  <div id="levelMenu" class="screen hidden">
+    <div class="menu-card">
+      <h2>Levels — Math</h2>
+      <div id="levelsGrid" class="levels-grid"></div>
+      <button class="back-btn">Back</button>
+    </div>
+  </div>
+
+  <!-- Help -->
+  <div id="helpMenu" class="screen hidden">
+    <div class="menu-card">
+      <h2>Help</h2>
+      <p>Catch the correct equations. +1 for correct, -1 for wrong. Reach the target score to pass a level.</p>
+      <p>Use mouse, touch, or arrow keys to move the basket.</p>
+      <button class="back-btn">Back</button>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div id="contactMenu" class="screen hidden">
+    <div class="menu-card">
+      <h2>Contact</h2>
+      <p>Made with ❤️ — school project demo</p>
+      <button class="back-btn">Back</button>
+    </div>
+  </div>
+
+  <!-- Game container -->
+  <div id="gameScreen" class="screen hidden">
+    <div id="hud">
+      <div id="scoreboard">Score: <span id="score">0</span></div>
+      <div id="timer">Time: <span id="timeLeft">30</span>s</div>
+      <div id="levelLabel">Level 1</div>
+    </div>
+
+    <div id="gameContainer">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <div id="gameFooter"></div>
+  </div>
+</div>
+
+<div id="resultScreen" class="screen hidden">
+  <div class="menu-card">
+    <h2 id="resultTitle"></h2>
+    <p id="resultText"></p>
+    <button id="resultBtn">OK</button>
+  </div>
+</div>
+
+<!-- เชื่อมต่อกับ JavaScript -->
+<script src="game.js"></script>
+</body>
+</html>
